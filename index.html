@@ -1,57 +1,4 @@
-import sys
-
-html_parts = []
-html_parts.append('''<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Biochemistry course.pdf - Verbatim Content</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #525659;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  h1 {
-    color: white;
-    text-shadow: 1px 1px 2px black;
-    margin-bottom: 30px;
-  }
-  .page-container {
-    width: 100%;
-    max-width: 850px;
-  }
-  .page {
-    background-color: white;
-    padding: 40px 60px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    white-space: pre-wrap;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 15px;
-    line-height: 1.6;
-    overflow-x: auto;
-  }
-  .page-number {
-    text-align: center;
-    color: #888;
-    font-family: Arial, sans-serif;
-    margin-bottom: 20px;
-    font-weight: bold;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-  }
-</style>
-</head>
-<body>
-<h1>Biochemistry course.pdf</h1>
-<div class="page-container">
-''')
+import re
 
 pages = [
 r'''Mechanism of action of Enzymes.
@@ -602,4 +549,26 @@ A = acid anhydride
 
 If a strong acid [H+] is added to the system it
 reacts with A- from the ionized salt [MA] components
-of buffer
+of buffer to form HA which is poorly dissociated.
+the expected increase in hydrogen ion Concentration or decrease in pH
+system does not occur. The system will continue to resist
+externally induced decrease in pH caused by addition of acid so
+long as the Salt MA is continues present in concentration to generate enough A-
+
+If a strong base [OH-] is added to the system the
+incoming OH- will react with H+ from ionized weak acid
+components of the buffer to form water. and because
+water poorly dissociate into H+ and OH- the expected
+increase in pH and decrease in hydrogen ion concentration
+does not occurs the system will continue to prevent
+such externally induced pH increase as long as HA
+is present in Concentration to supply H+.'''
+]
+
+replacements = {
+    "Emyme": "Enzyme", "brochemical": "biochemical", "cisease": "disease",
+    "protem": "protein", "luing": "living", "appenzyme": "apoenzyme",
+    "brond granjos": "broad groups", "treatmy": "treating", "chsease": "disease",
+    "cassolse": "dissolve", "Encaρχης": "Enzymes", "Lincer": "Liver",
+    "Substractes": "Substrates", "froloenzynie": "holoenzyme",
+    "thrug": "drug", "Jomt": "joint", "respera
