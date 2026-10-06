@@ -1,0 +1,605 @@
+import sys
+
+html_parts = []
+html_parts.append('''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biochemistry course.pdf - Verbatim Content</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #525659;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    margin-bottom: 30px;
+  }
+  .page-container {
+    width: 100%;
+    max-width: 850px;
+  }
+  .page {
+    background-color: white;
+    padding: 40px 60px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    white-space: pre-wrap;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+  .page-number {
+    text-align: center;
+    color: #888;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<h1>Biochemistry course.pdf</h1>
+<div class="page-container">
+''')
+
+pages = [
+r'''Mechanism of action of Enzymes.
+- Structures of Emyme: Structure-functionally,
+Enzymes com be classified to two brond granjos
+Namely. One-Component protein Emyms and two-
+Components conjugated protein     one-
+Component enzymes
+the two-component enzyme  contain
+Composed only polypeptide chain,
+non-protem strutumi Enzymi fogetter
+Ge
+لسه
+polypeptick
+postens
+is called holoenzyme, the
+ther with  non
+Y
+is called appenzyme white the non-protein componente  called
+the protein part of holoenzyme
+Cofactor, Wes could be metals or an organic chemical group.
+Tome metals in Enzyme structure pray participate directly
+In the catalytic proce
+native conformation of entynie. The metals which  
+or may and in micentammy thee
+the nature Conformation of enzymes
+Cofactor which tightly bound
+Can not easily seperated is called prosthetic group. while
+wosely round is called Coenzyme, they
+ne called activator.. the t
+ the enzyme Structure that is
+cofautir that are
+may also called Co-Substractes because the particip
+Stoichiometrically in reactwin and Conscined along with the main
+participate.
+Substrates. The role of Coenzyme for Conjugated Enzyme is
+played by Vitamin or is deraswatices. Unis apoenzyme cannot
+cisually
+Carry-out Catalytic activities mi Isolation only when it from
+froloenzynie with co factors.
+Note the apoenzyme amplifies the catalytic cabalety in holoenzyme
+Whybe the cofautor stabilizes the aprenzyre protein] agamst
+denaturation
+Cofactor has intrinsic functions which form catalytic Centre 
+while he apoenzyme makes this function real
+real by a
+regios
+It's streetme where the cofactor speenfically bined tres
+regun
+is called co-factor bmchuy domain.''',
+
+r'''use in
+treatmy cisease of gastro-intestinal tract.
+② Hyaluronidase enzyme Bat catalyse, chepolymerizatio-  hyaluronic affit
+asil  grand substance in tissue and Jomt  is employect to aid penetration of
+thrug into ciseased tissued and Jounts.
+(3) plasmin, and urokinase ad streptokinase are use to cassolse and eliminate.
+thrombs froin blood Yessel
+pancreatic deoxyribonuclease
+and removal of pus from woound
+an use to treat resperatury tract chsease
+(5) Asparragimise Hout Catalyse chimichatwn  asparagine  tumor growth factor)
+is use in treatment of certain kinds of cancer.
+eytochrome we to handle hypoxic Complication durmy heart cisease
+Lysozyme
+ust m
+treatmy Conjunctilities
+CLINICAL DIAGNOSTIC APPLICATONS of ENZYMS
+ can be achieved based on
+changes of activities of Cortaris Encaρχης
+or on changun is IsDenzyme spectra of the blood and of the urine. 16e
+actunties of lactante chehydrogenasi, aspartate aminotrans fumse, Creatine
+Kinast, Isocitrate chehychoiyenase and fructose 1,6-bisphosphagie aldiest are
+used in
+mostly in disease of 15c huveer usmy LDH and so aspartate amino.
+chagnosis of myocardial infarction, muscular dystrophy et다.
+tromferase.  -glytamyl transferase used in menusological rejection of frausgkut
+by bost, Alkaline phosphate senses for diagnoses of ciseases of the Lincer
+onser of osteomalacia and rickets.''',
+
+r'''geometrical or structural change withwn then substrate
+molecules. These can be Intramolecular transfer of atones or
+atomce groups, changes in the spatial chsposition of atoms,
+Intramolecular displacement of chubhe bounds. The Glass Include
+rulemust
+Cys-trans lisomerase, keto-enol Isomerase, mutases,
+@pimorase etc. 1UB system is
+ه
+HC-OH。
+ -p-oct
+ 
+Substrate Isomermix or substrat - typos
+Triosephosphate Isomerase.
+-glyceraldehyde-3-phosphate
+CH₂OH
+1
+Go
+1
+G
+Freaction somuze
+CH₂O-P- 
+ott
+Dehydroxy-acetome
+phosphate.
+The  of Triosephosphate Isomerase is
+phosphate ketol Isomerase.
+D-glyceraldehyde-3
+Class 6 LIGASES. [Synthetases].: Enzyme. that catalyze
+Joining together of two milecules  Condensation] with Cleaneage Chytralysis
+of Atp.
+xty
+ATP
+ADP+si
+Cool
+1
++NH₃
+glutamine Synthetase.
+ATP
+HN-CH
+COOH
+L-glutamicte.
+ABP+P
+The  fotam I Ligaseis
+"XY Legase. LADP)"
+0
+CANH
+CH
+1
+HACH
+1004
+glutamine''',
+
+r'''Contain non-protem component's that could interact wits
+the Substrate to bring brochemical transformation, His
+Intrinsic function is performed by a region of protem
+ Nois Centre
+Called Catalytic Centre of the purzyme  
+tesicheres Examples
+Contain Combination of amino resolves  resichnes
+Serine, histidinic, arginine, Cysteine, aspartic and glutamic acid,
+Ilivconirne aul tyrosine The's armord acid raclicals play the same role
+with Coenzyme in conjugated Enzymes
+ Amino acid residues Converging from thefferent points
+of the polypeptide chain is folded into the native tertiamy
+Structure to forms catalytic Centre, This any changes in tertany
+Strutin Eaused by Certain agents would lead to deformation of
+the catalytic centre and catalytic actrutar of the enzyme.
+Apont from Catalytic Centre for formed by Cofactor
+os assembly of specific amino acid residues, enzymes posses
+ other sites
+ its Centre Substrate Centre and allosteric
+tre.
+Substrate Centre is the Gentee Site in enzyme molecule
+responsible for the anchorage of the Compound undergoing
+brochemical transformation, the fixation of 158s substrate on this
+Site Foyslues e-amino group of Lysine, carboxylic group of
+Flutamic acid and sulfhydryl group of Cystein where the hydrogen
+brond anel bychrophobic interaction is absoluted inwheed to form
+ Enzyme - substrate Interaction for a sprentic activity of
+holbenzynie, actuée centre of Enzyme is
+Substrate Center.
+Considered rather  
+The active centre is the part of enzyme molecule which
+*binds to the substrate and cofactor to bring Complexity well
+adapted for brochemical transformation it exist as Cleft''',
+
+r'''ENZYMOLOGY
+2
+Manifestation of life, In molecular Ferny am in
+Consequences of Interaction of the chemical Components
+of the luing System. At the heart of these Interactions
+are the degradation of Hutrients to generate metabolic
+energy and precursors. to synthesize Its Components that
+Support its structwal organisatiwin, and perform all forms
+biological work by naking use of the precensve and energy
+Obtain through bodegradation These Interactions are kinetically
+Controlled which suppresses any tendency of the process towan
+attainment of the state of thermoclynamical equilibriom.in
+Liveing system thermodynamic equilibrium state leads to cleats
+Temperature and Concentration of the reactmy substances ave
+two of the factors which affect the kinetics of rate it
+a chemical reaction I Interaction . Higher temporatmi and
+Concentration lead to greater rate of chemical reaction. But
+In Licking systems, temperature and Concentration of metabolites.
+Livece moderately Low, these bead to Yery slow che..ucal reaction
+thus, brochemical processes in filing system proceed under
+Very mild physico-chemical conditions. On the Contrary, howev
+brochemical reaction in hillong system's rather proceed at
+Yey great speeel, This is so because of the presence of a
+Yeny potent Catalysis Called Enzymes.
+Enzymes were early chiscovered in food digestion in
+Saliva and Stomach threvegh Conderswis of starch to sugar.
+-ous pasteur conchided that fermentation of Sugow Into
+alcohol by yeast is catalyst by perment" which was
+In Separable from the yeast Cells. Frederick W. Kishne called
+this fermout molecule &nzyme meaning in  in and
+fermenting. •Later became established that
+Zymies are as Capable of workry Inside a cell as outside!''',
+
+r'''Class 3
+Hydrolases  Enzymes that Catalyze Hydrolysis
+reaction by cleavage of bonds in organic Componet  
+hiflhence of water.
+altz
+C=0
+NH
+$R_{1}-R_{2}+H_{2}O$ H₂OR $K_{1}-H+K_{2}-a_{44}$.
+NH
+    + H₂O Arginase  = +
+NH
+NH
+HN-CH
+ -94
+Cooct
+ -Arginine
+The 1.4.B 7 arginase.
+cortt
+1. 4B Substrate-hydrolase
+ -ornithine.
+is L-arginine-ureohychilase.
+Aidase (5) polyphosphatase.
+otter Examples or plsespitet Esterases glycosidases  @peptidases
+Classy LYASES Enzymes that catalyze non-hyctrolytic
+removal of group from Substrate to firin dentre bonds or attach
+ment  groups at dosebhe bond positions ο
+ the Substrate. The
+reactiwin usually accompanied by the release of prochuets lite
+Co2, H₂O,  etc The 1.4.B for lyase is in form  substrate-
+The group removed Cor attached) Lyase.
+Good
+Fumerasi
+HO-CH
+ct
+CODH
+L-malate
+Goot
+CH
+11
+CH
+1
+coot
++ H₂
+Fumerate.
+L-merlate-hycho-lyase.
+fumerase or fumerate hydratase is known as
+Ey.
+Carbon-cartoon kypse, Carbon-Netrogen lycase, Carton-oxygen aquse
+ud''',
+
+r'''Allosteric Centre is
+Structure. that
+a special región in enzyme
+molecular weight substanties brids to bring conformational
+is not acture site where Specific kow
+Changes of
+that Configured the actie centre for merense or decreas
+of the Three-dimentional structine of enzyme molecul
+Catalytic acticenties y
+allosteric Enzymes not all enzyme possess allosteric centre. Examp
+enzyme. Allosteric Centre is
+of allosteric enzyme. pyruvate kmase@phospho fructokunase-1,
+enly for
+(2) Citrate synthase.
+I krebs Cycle]
+its activator ADP
+Its inhibitor ATP, NADH
+C
+the
+[glucolysis)
+Its activator ABP
+Its Inhibitor ATP,
+and Alumine
+glycolysis)
+Its activator Amp, ADP
+Its hibster ATP med
+Citrate
+ Cetrate chehrychogenast
+I kres cycle
+Its actucator APP
+Its  ATP, NADH.
+MOLECULAR FORMS OF ENZYMS.
+Enzyme exist is senteral forms within a cell, organism. Defference
+mochfication (forme) of enzyme that catalyse the same brochemical reactu
+ave called mutiplie moleculari forms of the same emuyme. Bere twopd
+hat brings mochfication of Enzyme to forces cifferent forms
+Broetgemical origm which consist the post-translation
+mochfication of ithe nascent enzyme protein [New enzyme porten]. This
+Cam be by proteolytic cleavage, methylation, phosphorylation,
+glycosylation, acetylation etc. These cheuncal mochficatwns brmgs
+about changes is catalytic activities of the enzyme 2ng phosphorylas
+-
+Genetic origin I the genetically determined molecular form of
+Enzyme is called Isoenzymes [150Rymes] They aree chefferent Version's
+of the same enzyme that catalupe the Same brochemical reaction with
+the Surme Coemyne but have different structure, properties and gratit
+gene They deffer in electrophoretic mobility, Immunological reactu''',
+
+r'''accelerate  speed] an already going or therrmodyna-
+mically feasible reaction. At the end of the reaction
+ Enzymes are as potent as they were at the begining
+of the reactions. All Enzymes and protein oxcopt
+Catalytic RNA molecule, As protein enzyme catalytic
+Actiucties clepends on the Integrity of their nature protein
+Conforniatin, If  enzyme is clengtured or chssociated into
+   Subsint, catalytic activity is usually lost. If an enzyme
+es broken down into its components
+ammo acids, it's
+Catalytic activity is always chistroyed thus. the primany,
+Secondary, tertiary and quaternary structures of protein
+Enzupons and essential to the catalytic actulity.
+COFACTORS AND COENZYMES
+Some Enzymes in mit require any chewiccal group for threw
+tivity train their amino acid residues. Others reguneid
+juned additional
+-hemical Components called Cofactor and Coenzyme.
+COFACTORS Ave non-protein chemical compounds
+metallic wn that help to facilitate. Catalytic activity of
+Onzyme it bonds in acture site of the enzyme. Some
+Cefactors and then entrymer
+$Cu^{2+}$
+Cytochrome oxidase
+• $Fe^{2x}erfe^{3+}$ Cytochrome Doxidase, Gatabase, peroxidase.
+$k^{+}$
+pyruvate kinase.
+Agrginase, ribonucleotide reductase.
+Hexokinase, glucose-6-phosphatese, pyruvate kinase.
+Dinetrogenase
+$m_{b}^{2+}$
+4
+$17g^{2+}$
+Urease
+$2n^{2+}$
+Carboxypeptidases A and B.
+Mo
+Nizt
+Carbonic anhydrese, alcohol dehydrogenase''',
+
+r'''which acts on arginine etc. In 1961
+ention Umon  Brochemistry  1.46) brought
+istem 7 neomenclatore and classifienton bay Consideray.
+1
+reaction bang catalysteel. custa
+Into 518(6)   
+chimended that
+theprate and the type of the reaction be
+he To 4.B system, 12mes
+on the borsis A the reactions they catalyze.
+Class Oxidoreductases these   tattich catalyze
+xdection-reduction reaction of metabolism, Oxidation is cromodal
+ protonselectron) from the substrate while Reduction is addet in
+ proton (Electron) to the acceptors molecule.
+$\delta_{I}OSH_{=}+A\frac{a.kneM_{2}}{x}S+AH_{2}$
+Stt₂ is the reduced substrate. A
+dener: accepior oxidered
+is the oraclezed callipter 5 is
+ Oxicized substrate Atta is the rechicant caltepter.
+CH
+3
+HO-CH  NADT Lactate
+CODH
+dehydrogenase
+→ $G_{L=D}^{t4_{3}}+AA_{D}HCH_{1}).$
+Ether Example of oxidorechuctase ane Catalase, peroxidase, ale tron
+transprotasty anaerobic dehydrogenase.
+20
+Class Tramferases: Are enzymes that catalyze the reerd
+reaction
+ inter-more calace  . atom or atomic groups
+donor-accepires
+S-GA-0  TA-G
+  Alp  -6-  
+Stricose
+ 매
+Thexokinas
+له
+CH₂ロードOM
+st
+万
+よみ
+0
+ App
+GEP
+Do-hexose-6-phosphsframfirase.
+ 
+live le xotinase is    
+Etter excumples of Tromsteruses fid
+Amin I
+Amilo transterne ③ aly fromsperise.''',
+
+r'''Step III The formation of these hydrogen bonds result to weakenmy
+of ester linkage in acetylcholine, then imidazole histidine group
+attracts proton from OH of serine thereby causes breaking down of
+ester bond of the substrate with proton crossing from tyrosine
+OH to choline group.
+
+Step IV hydrolysis of the active Centre, result to liberation of
+the reaction product [Choline] and regenerate OH group of the
+amino acid radicals, then the enzyme is ready for the next act
+of catalyst.
+
+Important Features of Enzyme Catalysis
+- The Conformational changes of the enzyme molecule during
+the process is brought by participation of the whole polypeptide structure
+of the enzyme.
+
+- The Substrate fit into the enzyme active centre in the manner
+of "a key to the lock". The key to lock concept was formulated by fischer
+1894 state that "Specific action of an enzyme is predetermined
+by strict correspondence of the geometrical structure of the substrate
+to the enzyme active centre"
+
+- Koshland 20th Century modification of key-to-lock by fischer.
+states that the active centre of Enzyme is Conformational
+flexible, when substrate approaches the active site, the change
+interaction induce complementary conformational changes in both
+substrate and active site of enzyme to bring a corresponding fit.''',
+
+r'''Specificity of Enzyme action: This is descriminatory
+action of and
+Complementarity between the Configuration of active Centre
+on a substrate, due to
+and that of Substrate three types of specificity
+Absolute specificity is observed when one particular
+catalyst a particular reaction or acts on a particular Compound
+glucokinase catalyse phosphorylation glucose only
+of another hexose. Urease catalyse only the hydrolysis
+into Ammonia and carbondioxide.
+not but phosphory-
+
+Group specificity is observed when an Enzyme catalyse
+a particular reaction irrespective of the substrates what matters is
+the type of chemical bond formed or broken. not the substrate
+hexokinase catalyse ATP-mediated phosphorylation of hexoses. Whether
+Glucose, galactose etc
+
+Stereochemical specificity Enzyme catalyzing specific transfer
+of a particular isomers of a compound and not mediating the transfer
+of the corresponding antipode ex. Amino acid transaminases catalyse the
+transamination of only L-amino acids.
+
+Enzyme dependence of activators activity: substances called
+activator such as Coenzymes, Cofactors enhance the formation of Enzyme-
+Substrate complex by stabilizing the tertiary & quaternary structure of
+allosteric Enzyme when bind at allosteric site this bring conformational
+change that facilitate catalysis.
+
+Enzyme dependence on inhibitors activity: some factors like
+heat, Concentrated acids, salts, and heavy metals decrease Enzyme reaction
+non-specifically they also have no information about the mechanism of
+action, while some factors called inhibitor are chemical agents which
+specifically decrease the rate of biochemical reaction it could be
+reversible and Irreversible inhibition''',
+
+r'''then rate of formation Es Complex V1 is proportional to the
+product of S and E
+V1 = k1[S][E]
+
+The reaction the conversion of P to Es is almost
+not possible until the
+Complex [ES] depends on its formation and
+until the reversible reaction is
+ignored. The Concentration of Es
+The rate of breaking down Es complex into S and E
+V-1 = k-1[ES] ... (d) breaking is to S
+At the steady state when the Concentration of Es complex is constant,
+the rate of its formation (V1) will be equal to the total rate of
+its decomposition in both directions (V-1 + V2)
+V1 = V-1 + V2 ... (e)
+k1[S][E] = k-1[ES] + k2[ES]
+but V1=K1[S][E]
+
+At Equilibrium, Concentration of Enzyme is equal to Concentration
+total Enzyme [E0] minus Enzyme in Enzyme substrate complex [ES]
+[E] = [E0] - [ES]
+
+k1([E0] - [ES])[S] = k-1[ES] + k2[ES]
+k1([E0] - [ES])[S] = (k-1 + k2)[ES] ... (f)
+[E0][S] - [ES][S] = (k-1 + k2)/k1 [ES] ... (g)
+(K-1 + k2)/K1
+let be expressed as one constant Km Called
+Michaelis Constant.''',
+
+r'''Hydrogen Bonding between molecule
+Hydrogen covalently bound with an electronegative atom to form
+a molecule such as H2O, NH3, HCl, HF. This molecule interacts due to
+formation of hydrogen bond
+formation of dipole charge with formation
+The physicochemical properties of water play a role in the maintenance of biologically
+active conformation of bio-molecules.
+The pH of Water is 7 It is a neural Substance.
+Ice is lighter than liquid water therefore making the
+Ice to float in water.
+Ice has lesser density than liquid water because the Volume of
+liquid water is lesser than the Volume of Solid water (ice)''',
+
+r'''According Henderson-Hasselbalch Equation
+HA ⇌ H+ + A- according
+to Law of mass
+action
+K = [H+][A-] / [HA] then Taking Logarithm of both sides
+K = [H+] × [A-] / [HA]
+LogK = log[H+] + log([A-] / [HA])
+-logK = -log[H+] - log([A-] / [HA])
+pK = pH - Log([A-] / [HA])
+finally
+pH = pK + log([A-] / [HA])
+multiply through by -1
+To get pH.
+where -logK = pK
+and -log[H+] = pH
+
+in RCOOH ⇌ RCOO- + H+
+pH = pK_a + log([acetate] / [acetic acid])
+Henderson-Hasselbalch
+Equation.
+
+Conditions pH = pK ... at half Neutralization
+when [A-] = [HA].
+
+Hydrogen ion plays a special role in biochemical reaction because it
+is the medium of biofluid and many life processes can only occur
+specific concentrations of hydrogen ion, deviation from these leads
+adverse effect. that causes physiological effect in living Cells & tissue''',
+
+r'''BUFFERING PHENOMENON
+Due adverse effect of deviation from Optimal hydrogen
+Concentrations, the body systems maintain
+ability of
+ion Concentration. This is an intrinsic
+constant hydrogen
+functions of the chemical
+or biochemical system itself.
+For a solution to buffer it must contain a mixture of
+weak acid and its salt. This two components react to
+keep the pH or hydrogen ion Concentration stable at Constant Value.
+buffering we mean the ability of solution to resist change
+pH when acid or basic medium is added
+
+Mechanism of Buffering. buffer
+Contain mixture of weak acid
+and Salt.
+i.e HA and MA.
+acid
+Salt.
+M = metal.
+H = hydrogen
+A = acid anhydride
+
+If a strong acid [H+] is added to the system it
+reacts with A- from the ionized salt [MA] components
+of buffer
